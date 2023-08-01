@@ -1,0 +1,8 @@
+<h6>{{ quiz.question }}</h6>
+<div class="answers">
+  <div *ngFor="let answer of quiz?.answers">
+    <button id="answer" [class]="getClass(answer)" value="answer" (click)="selectValue(answer)">
+      {{ answer }}
+    </button>
+  </div>
+</div>
